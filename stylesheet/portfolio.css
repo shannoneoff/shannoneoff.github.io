@@ -422,7 +422,7 @@ button:hover, .form-container .btn:hover {
 }
 
 /* Submit button upon hover */
-.form-container .submit:hover {
+.form-container .btn:hover {
     color: white;
     background-color: rgba(3, 104, 5, 0.575);
     transition-duration: 1s;
