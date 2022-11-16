@@ -2,29 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Shannon Eoff: Portfolio</title>
-        <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
+        <meta name="viewport" content="width=device-width" />
+        <title>Shannon Eoff</title>
         <link rel="stylesheet" type="text/css" href="./stylesheet/portfolio.css">
     </head>
 
     <body class="background">
 
-        <script>
-            document.body.classList.add("fade-out");
-
-            window.addEventListener("DOMContentLoaded", () => {
-                document.body.classList.remove("fade-out");
-            });
-        </script>
-
         <!-- NAV BAR -->
         <div class="navbar">
             <a class="active" href="#home">Home</a>
-            <a href="#slideshow">Slideshow</a>
             <a href="#about">About</a>
             <a href="#github">GitHub</a>
-            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+            <a href="#contact">Contact</a>
         </div>
         <!-- END NAV BAR -->
 
@@ -66,57 +56,6 @@
         </div>
         <!-- END VIDEO TEXT -->
 
-        <!-- SLIDESHOW SECTION -->
-        <div id="slideshow">
-            <div id="Slideshow_Background">
-                <div id="Slideshow_Container">
-                    <!-- Slide 1 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/Selfie.jpg" alt="Selfie">
-                        <div class="text">I'm available to assist you on your project!</div>
-                    </div>
-                    <!-- Slide 2 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos">
-                        <div class="text">I am a full-stack software developer,<br>trained in:<br>HTML, CSS, JavaScript,...</div>
-                    </div>
-                    <!-- Slide 3 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/Python.png" alt="Python logo">
-                        <div class="text">...the popular programming language, Python,...</div>
-                    </div>
-                    <!-- Slide 4 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C#, .NET logos">
-                        <div class="text">...C#, .NET Framework, ASP.NET, MVC,...</div>
-                    </div>
-                    <!-- Slide 5 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL logo">
-                        <div class="text">...back end development, databases, and SQL.</div>
-                    </div>
-                    <!-- Slide 6 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/binary-world.jpg" alt="Binary Code + Earth">
-                        <div class="text"><a class="white-text contact" onclick="openForm()">Reach out and we will talk!</a></div>
-                    </div>
-                    <!-- Previous and Next buttons -->
-                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
-                    <br><br>    <!-- Adds a space between slideshow images and dots -->
-                    <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
-                    <div style="text-align: center;">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                        <span class="dot" onclick="currentSlide(5)"></span>
-                        <span class="dot" onclick="currentSlide(6)"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- ABOUT SECTION -->
         <div class="row" id="about">
             <!-- LEFT COLUMN -->
@@ -129,9 +68,9 @@
                 <p>
                     I am a software developer who truly enjoys coding! As a mother of adult children, partner to a wonderful non-binary human, drummer, traveler, and volunteer, I stay busy with all of the things which give life to myself and others.
                     <br>
-                    <br>As a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s JavaScript Boot Camp, I am trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, Python, Bootstrap, and more.
+                    <br>As a future graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s JavaScript Boot Camp, I am trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, Python, Bootstrap, and more.
                     <br>
-                    <br>Let's collaborate together on your project. <a onclick="openForm()" class="contact">Contact</a> me below!
+                    <br>Let's collaborate together on your project. <a href="#contact">Contact</a> me below!
                 </p>
             </div>
         </div>
@@ -142,7 +81,7 @@
             <!-- LEFT COLUMN -->
             <div class="column_1">
                 <h1>GitHub</h1>
-                <p>
+                <p class="center">
                     You may view my coding projects on my GitHub profile here:
                     <br>
                     <p class="center"><a href="https://github.com/shannoneoff" target="_blank">My GitHub profile</a></p>
@@ -156,24 +95,23 @@
         <!-- END GITHUB SECTION -->
 
         <!-- CONTACT SECTION -->
-        <div id="contact">
-            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
-            <div class="form-popup" id="myForm">
-            
+        <div class="row" id="contact">
+            <!-- Contact image, Left column -->
+            <div class="column_2 column_tall">
+                <img src="./images/contact_rainbow.jpg" alt="Contact Rainbow image">
+            </div>
+            <!-- Contact form, Right column -->
+            <div class="column_1 column_tall">
+                <h1>Contact</h1>
                 <!-- FORMSPREE Form data -->
-                <form action="https://formspree.io/f/xyyvpbwa" method="post" class="form-container">
-                    <h1>Contact</h1>
-                    <label for="name"><b>Name:</b></label>
-                        <input type="text" placeholder="Your Full Name" name="name" required>
-                    <label for="email"><b>Email:</b></label>
-                        <input type="text" placeholder="Email Address" name="email" required>
-                    <label for="phone"><b>Phone:</b></label>
-                        <input type="text" placeholder="Phone Number (optional)" name="phone">
-                    <label for="message"><b>Message:</b></label>
-                        <input type="text" placeholder="Enter your message here" name="message" required>
-                        
-                    <button type="submit" class="btn">SUBMIT</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                <form action="https://formspree.io/f/xyyvpbwa" method="post">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="email" name="Email" placeholder="Enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="message" name="Message" placeholder="Enter your message here">
+                        <input type="submit" value="SUBMIT">
                 </form>
             </div>
         </div>
@@ -188,6 +126,5 @@
         </footer>
         <!-- END FOOTER SECTION -->
 
-        <script src="./javascript/portfolio.js"></script>
     </body>
 </html>
