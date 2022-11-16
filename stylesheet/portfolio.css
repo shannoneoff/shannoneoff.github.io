@@ -508,6 +508,7 @@ button:hover, .form-container .btn:hover {
     #Slideshow_Container {
         width: 80vw;                /* Relative sizing of the container for the slideshow set to 30% of viewport width */
     }
+}
 
 /* Screens under 576px will not display background video */
 @media screen and (max-width: 576px) {
