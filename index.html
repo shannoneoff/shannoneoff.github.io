@@ -1,1 +1,193 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Shannon Eoff: Portfolio</title>
+        <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
+        <link rel="stylesheet" type="text/css" href="./stylesheet/portfolio.css">
+    </head>
+
+    <body class="background">
+
+        <script>
+            document.body.classList.add("fade-out");
+
+            window.addEventListener("DOMContentLoaded", () => {
+                document.body.classList.remove("fade-out");
+            });
+        </script>
+
+        <!-- NAV BAR -->
+        <div class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#slideshow">Slideshow</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+        </div>
+        <!-- END NAV BAR -->
+
+        <!-- Breaks between Nav Bar and First Heading -->
+        <br>
+        <br>
+
+        <!-- BACKGROUND VIDEO -->
+        <div id="home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="./images/video/Typing.mp4" type="video/mp4">
+                <!-- Message if video doesn't run -->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <!-- END BACKGROUND VIDEO -->
+
+        <!-- VIDEO TEXT -->
+        <div class="video-text">
+            <h1 class="white-text">Shannon Eoff's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>In some ways, programming is like painting.
+                        <br>You start with a blank canvas and certain basic raw materials.
+                        <br>You use a combination of science, art, and craft to determine what to do with them.
+                    </q>
+                    <br> - Andrew Hunt
+                    <br>
+                    <br>
+                    <q>The most damaging phrase in the language is...&nbsp;it's always been done this way.
+                    </q>
+                    <br> - Grace Hopper
+                    <br>
+                    <br>My name is Shannon Eoff.&nbsp;Welcome to my portfolio website.&nbsp;On it, I will share with you my background and experience.
+                    <br>
+                    <br>Thank you for stopping by and enjoy!
+                </p>
+            </strong>
+        </div>
+        <!-- END VIDEO TEXT -->
+
+        <!-- SLIDESHOW SECTION -->
+        <div id="slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Selfie.jpg" alt="Selfie">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos">
+                        <div class="text">I am a full-stack software developer,<br>trained in:<br>HTML, CSS, JavaScript,...</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Python.png" alt="Python logo">
+                        <div class="text">...the popular programming language, Python,...</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C#, .NET logos">
+                        <div class="text">...C#, .NET Framework, ASP.NET, MVC,...</div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL logo">
+                        <div class="text">...back end development, databases, and SQL.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/binary-world.jpg" alt="Binary Code + Earth">
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Reach out and we will talk!</a></div>
+                    </div>
+                    <!-- Previous and Next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                    <br><br>    <!-- Adds a space between slideshow images and dots -->
+                    <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                    <div style="text-align: center;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <div class="row" id="about">
+            <!-- LEFT COLUMN -->
+            <div class="column_2">
+                <img src="./images/laptop.jpg" alt="Laptop Setup">
+            </div>
+            <!-- RIGHT COLUMN -->
+            <div class="column_1">
+                <h1>About</h1>
+                <p>
+                    I am a software developer who truly enjoys coding! As a mother of adult children, partner to a wonderful non-binary human, drummer, traveler, and volunteer, I stay busy with all of the things which give life to myself and others.
+                    <br>
+                    <br>As a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s JavaScript Boot Camp, I am trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, Python, Bootstrap, and more.
+                    <br>
+                    <br>Let's collaborate together on your project. <a onclick="openForm()" class="contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+        <!-- END ABOUT SECTION -->
+
+        <!-- GITHUB SECTION -->
+        <div class="row" id="github">
+            <!-- LEFT COLUMN -->
+            <div class="column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You may view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/shannoneoff" target="_blank">My GitHub profile</a></p>
+                </p>
+            </div>
+            <!-- RIGHT COLUMN -->
+            <div class="column_2">
+                <a href="https://github.com/shannoneoff" target="_blank"><img src="./images/Octocat.jpg" alt="GitHub Octocat logo"></a>
+            </div>
+        </div>
+        <!-- END GITHUB SECTION -->
+
+        <!-- CONTACT SECTION -->
+        <div id="contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+            
+                <!-- FORMSPREE Form data -->
+                <form action="https://formspree.io/f/xyyvpbwa" method="post" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name:</b></label>
+                        <input type="text" placeholder="Your Full Name" name="name" required>
+                    <label for="email"><b>Email:</b></label>
+                        <input type="text" placeholder="Email Address" name="email" required>
+                    <label for="phone"><b>Phone:</b></label>
+                        <input type="text" placeholder="Phone Number (optional)" name="phone">
+                    <label for="message"><b>Message:</b></label>
+                        <input type="text" placeholder="Enter your message here" name="message" required>
+                        
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+            </div>
+        </div>
+        <!-- END CONTACT SECTION -->
+
+        <!-- FOOTER SECTION -->
+        <footer>
+            <p>
+                <p class="center">&copy;2022 <a href="https://github.com/shannoneoff">Shannon Eoff</a></p>
+                <br>
+            </p>
+        </footer>
+        <!-- END FOOTER SECTION -->
+
+        <script src="./javascript/portfolio.js"></script>
+    </body>
+</html>
