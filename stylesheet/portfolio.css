@@ -236,7 +236,7 @@ footer {
     top: 35%;                       /* Moves buttons up in slideshow container */
     width: auto;                    /* Width of buttons is automatically adjusted based upon content */
     padding: 2vw;                   /* Adds padding equal to 2% of viewport width */
-    color: darkgray;
+    color: rgb(233, 246, 248);
     font-weight: bold;
     font-size: 1.5vw;
     border-radius: 0 3px 3px 0;     /* Adds slightly rounded border on top and bottom right corners */
@@ -421,6 +421,15 @@ button:hover, .form-container .btn:hover {
     margin-bottom: 1vh;                 /* Adds space between Submit and Close buttons */
 }
 
+/* Submit button upon hover */
+.form-container .submit:hover {
+    color: white;
+    background-color: rgba(3, 104, 5, 0.575);
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: black;
+}
+
 /* Close button */
 .form-container .cancel {
     background-color: black;
@@ -496,11 +505,9 @@ button:hover, .form-container .btn:hover {
 
 /* In media queries, applies Images styles for screens 576px and smaller */
 @media screen and (max-width:576px) {
-    img {
-        height: 100px;
-        margin-top: 150px;
+    #Slideshow_Container {
+        width: 80vw;                /* Relative sizing of the container for the slideshow set to 30% of viewport width */
     }
-}
 
 /* Screens under 576px will not display background video */
 @media screen and (max-width: 576px) {
