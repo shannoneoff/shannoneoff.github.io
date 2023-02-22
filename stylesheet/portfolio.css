@@ -80,6 +80,14 @@ a {
     text-decoration: underline; /* All links are underlined */
 }
 
+a.resumelink {
+    color: mediumblue;
+    cursor: pointer;
+    display: flex;
+    text-decoration: underline;
+    justify-content: center;
+}
+
 /* Quotation Elements */
 q {
     font-style: italic;     /* Italicizes quote */
@@ -118,8 +126,8 @@ footer {
     top: 0;                 /* No space is displayed above Nav Bar */
     width: 100%;            /* Nav Bar spans width of page */
     z-index: 1;             /* Ensures other elements don't display over Nav Bar */
-    -webkit-animation: moveNav 5s;  /* For Safari 4.0 - 8.0 */
-    animation: moveNav 5s;  /* moveNav animation lasts 5 seconds */
+    -webkit-animation: moveNav 3s;  /* For Safari 4.0 - 8.0 */
+    animation: moveNav 3s;  /* moveNav animation lasts 3 seconds */
 }
 
 /* moveNav animation effect for moving the nav bar in from the left of the screen */
@@ -184,8 +192,8 @@ footer {
                                         partially displayed */
     padding-top: 2vh;             /* Adds padding around video-text container so background goes slightly beyond text */
     position: relative;           /* Sets text relative to normal positioning, allowing use of animation below */
-    -webkit-animation: moveVideoText 5.1s;  /* Animation for Safari 4.0 - 8.0 */
-    animation: moveVideoText 5.1s;  /* Animation takes 5.1 seconds */
+    -webkit-animation: moveVideoText 3.1s;  /* Animation for Safari 4.0 - 8.0 */
+    animation: moveVideoText 3.1s;  /* Animation takes 3.1 seconds */
 }
 
 /* Causes overlay video text to move up from bottom of page upon page load */
@@ -351,8 +359,8 @@ footer {
     color: black;                 /* Sets color of button text to black */
     border: solid black;          /* Makes solid black border around button */
     cursor: pointer;                /* Changes cursor when hovered over button to a pointer */
-    -webkit-animation: movePopup 5s;    /* Animation set for 5 seconds in Safari 4.0 - 8.0 */
-    animation: movePopup 5s;        /* Animation set for 5 seconds */
+    -webkit-animation: movePopup 3s;    /* Animation set for 3 seconds in Safari 4.0 - 8.0 */
+    animation: movePopup 3s;        /* Animation set for 3 seconds */
 }
 
 /* movePopup animation moves button from off the right side of screen to its fixed location on viewport */
@@ -389,7 +397,12 @@ footer {
     margin: .6vw 0 .6vw 0;          /* Adds space between input boxes and labels */
     border: none;                   /* Removes border from input boxes */
     background: Gainsboro;        /* Sets background color of input boxes */
-    font-size: 1vw;                 /* Relative font sizing based upon width of viewport */
+    font-size: 2vw;                 /* Relative font sizing based upon width of viewport */
+}
+
+/* Labels above input boxes */
+.form-container label {
+    font-size: 2vw;
 }
 
 /* General styling for all buttons */
@@ -453,11 +466,29 @@ button:hover, .form-container .btn:hover {
     p, .text {
         font-size: 3.75vw;
     }
+    .form-container input[type=text] {
+        font-size: 3vw;
+    }
+    .form-container label {
+        font-size: 3vw;
+    }
+    button {
+        font-size: 3.25vw;
+    }
 }
 
 @media screen and (min-width: 528px) and (max-width: 660px) {
     p, .text {
         font-size: 3.5vw;
+    }
+    .form-container input[type=text] {
+        font-size: 3vw;
+    }
+    .form-container label {
+        font-size: 3vw;
+    }
+    button {
+        font-size: 3.1vw;
     }
 }
 
@@ -465,10 +496,22 @@ button:hover, .form-container .btn:hover {
     p, .text {
         font-size: 2.75vw;
     }
+    .form-container input[type=text] {
+        font-size: 3vw;
+    }
+    .form-container label {
+        font-size: 3vw;
+    }
+    button {
+        font-size: 3vw;
+    }
 }
 
 @media screen and (min-width: 800px) and (max-width: 924px) {
     p, .text {
+        font-size: 2.5vw;
+    }
+    button {
         font-size: 2.5vw;
     }
 }
@@ -521,7 +564,7 @@ button:hover, .form-container .btn:hover {
 @media screen and (max-width: 1080px) {
     .navbar a {
         width: 20%;                         /* Each navbar link takes up 1/5 of Nav Bar */
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 }
 
