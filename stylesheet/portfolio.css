@@ -80,12 +80,14 @@ a {
     text-decoration: underline; /* All links are underlined */
 }
 
-a.resumelink {
+div#speciallinks {
     color: mediumblue;
     cursor: pointer;
     display: flex;
-    text-decoration: underline;
     justify-content: center;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw;   /* Expands text slightly */
+    font-size: 2vw;       /* Relative font sizing equal to 2.5% of viewport width */
 }
 
 /* Quotation Elements */
@@ -97,10 +99,10 @@ q {
 img {
     filter: grayscale(25%); /* Rids images of 25% of their color */
     border-radius: 8px;     /* Images have rounded corners */
-    max-width: 100%;        /* All images stay within the width of their container */
-    max-height: 100%;       /* All images stay within the height of their container */
+    max-width: 90%;        /* All images stay within the width of their container */
+    max-height: 90%;       /* All images stay within the height of their container */
     display: block;         /* By specifying block display, images will be able to be centered */
-    margin: auto auto auto auto;    /* Centers all images */
+    margin: 1em auto auto auto;    /* Centers all images */
 }
 
 /* Image Elements Hover Effect */
@@ -327,7 +329,7 @@ footer {
     float: left;
     width: 50%;                     /* Column takes up half of page width */
     padding: 1.6%;
-    height: 450px;                  /* Sets height of column to 450px - ADJUSTABLE */
+    height: 550px;                  /* Sets height of column to 450px - ADJUSTABLE */
     background-color: #f2f2f2;    /* Sets background color of left columns */
 }
 
@@ -335,7 +337,7 @@ footer {
     float: left;
     width: 50%;
     padding: 1.6%;
-    height: 450px;
+    height: 550px;
     background-color: #78a994;
 }
 
@@ -463,8 +465,29 @@ button:hover, .form-container .btn:hover {
 /**** MEDIA QUERY SECTION ****/
 /* Media rules for paragraph font size for different screen sizes */
 @media screen and (max-width: 527px) {
-    p, .text {
+    .navbar {
+        height: 3em;
+    }
+    .navbar a {
+        height: 1.5em;
         font-size: 3.75vw;
+    }
+    .navbar a.active {
+        height: 1.5em;
+    }
+    p, .text {
+        font-size: 4.5vw;
+    }
+    div#speciallinks {
+        display: flex;
+        text-align: center;
+        font-size: 4.5vw;
+    }
+    .column_1 {
+        height: 620px;
+    }
+    .column_2 {
+        height: 620px;
     }
     .form-container input[type=text] {
         font-size: 3vw;
@@ -478,8 +501,23 @@ button:hover, .form-container .btn:hover {
 }
 
 @media screen and (min-width: 528px) and (max-width: 660px) {
-    p, .text {
+    .navbar {
+        height: 3em;
+    }
+    .navbar a {
+        height: 1.5em;
         font-size: 3.5vw;
+    }
+    .navbar a.active {
+        height: 1.5em;
+    } 
+    p, .text {
+        font-size: 3.25vw;
+    }
+    div#speciallinks {
+        display: flex;
+        text-align: center;
+        font-size: 3.25vw;
     }
     .form-container input[type=text] {
         font-size: 3vw;
@@ -493,8 +531,32 @@ button:hover, .form-container .btn:hover {
 }
 
 @media screen and (min-width: 661px) and (max-width: 799px) {
+    .navbar {
+        height: 3em;
+    }
+    .navbar a {
+        height: 1.5em;
+        font-size: 3.5vw;
+    }
+    .navbar a.active {
+        height: 1.5em;
+    } 
+    #Slideshow_Container {
+        width: 70vw;
+    }
     p, .text {
-        font-size: 2.75vw;
+        font-size: 3.5vw;
+    }
+    .column_1 {
+        height: 800px;
+    }
+    .column_2 {
+        height: 800px;
+    }
+    div#speciallinks {
+        display: flex;
+        text-align: center;
+        font-size: 3.5vw;
     }
     .form-container input[type=text] {
         font-size: 3vw;
@@ -508,8 +570,41 @@ button:hover, .form-container .btn:hover {
 }
 
 @media screen and (min-width: 800px) and (max-width: 924px) {
+    .navbar {
+        height: 3em;
+    }
+    .navbar a {
+        height: 1.5em;
+        font-size: 3.5vw;
+    }
+    .navbar a.active {
+        height: 1.5em;
+    }
+    #Slideshow_Container {
+        width: 70vw;
+    }
+    #Typing_Video {
+        top: 0;
+    }
     p, .text {
-        font-size: 2.5vw;
+        font-size: 3vw;
+    }
+    div#speciallinks {
+        display: flex;
+        text-align: center;
+        font-size: 3vw;
+    }
+    .column_1 {
+        height: 700px;
+    }
+    .column_2 {
+        height: 700px;
+    }
+    .form-container input[type=text] {
+        font-size: 3vw;
+    }
+    .form-container label {
+        font-size: 3vw;
     }
     button {
         font-size: 2.5vw;
@@ -517,13 +612,52 @@ button:hover, .form-container .btn:hover {
 }
 
 @media screen and (min-width: 925px) and (max-width: 1050px) {
+    .navbar {
+        height: 2em;
+    }
+    .navbar a {
+        height: 1.25em;
+        font-size: 2.5vw;
+    }
+    .navbar a.active {
+        height: 1.25em;
+    }
     p, .text {
+        font-size: 2.25vw;
+    }
+    div#speciallinks {
+        display: flex;
+        text-align: center;
         font-size: 2.25vw;
     }
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1310px) {
+    .navbar {
+        height: 2em;
+    }
+    .navbar a {
+        height: 1.25em;
+        font-size: 2.5vw;
+    }
+    .navbar a.active {
+        height: 1.25em;
+    }
     p, .text {
+        font-size: 2vw;
+    }
+    div#speciallinks {
+        display: flex;
+        text-align: center;
+        font-size: 2vw;
+    }
+    .form-container input[type=text] {
+        font-size: 2vw;
+    }
+    .form-container label {
+        font-size: 2vw;
+    }
+    button {
         font-size: 2vw;
     }
 }
@@ -532,10 +666,20 @@ button:hover, .form-container .btn:hover {
     p, .text {
         font-size: 1.75vw;
     }
+    div#speciallinks {
+        display: flex;
+        text-align: center;
+        font-size: 1.75vw;
+    }
 }
 
 @media screen and (min-width: 1536px) and (max-width: 2269px) {
     p, .text {
+        font-size: 1.5vw;
+    }
+    div#speciallinks {
+        display: flex;
+        text-align: center;
         font-size: 1.5vw;
     }
 }
@@ -544,12 +688,17 @@ button:hover, .form-container .btn:hover {
     p, .text {
         font-size: 1.35vw;
     }
+    div#speciallinks {
+        display: flex;
+        text-align: center;
+        font-size: 1.35vw;
+    }
 }
 
 /* In media queries, applies Images styles for screens 576px and smaller */
 @media screen and (max-width:576px) {
     #Slideshow_Container {
-        width: 80vw;                /* Relative sizing of the container for the slideshow set to 30% of viewport width */
+        width: 80vw;                /* Relative sizing of the container for the slideshow set to 80% of viewport width */
     }
 }
 
@@ -557,14 +706,6 @@ button:hover, .form-container .btn:hover {
 @media screen and (max-width: 576px) {
     #Typing_Video {
         display: none;
-    }
-}
-
-/* Screens 1080px and smaller will display Nav Bar links equally distributed */
-@media screen and (max-width: 1080px) {
-    .navbar a {
-        width: 20%;                         /* Each navbar link takes up 1/5 of Nav Bar */
-        font-size: 3vw;
     }
 }
 
